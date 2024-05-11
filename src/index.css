@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-extrasmall: 12px;
+  --text-small: 14px;
+  --text-medium: 16px;
+  --text-large: 18px;
+  --text-xl: 18px;
+  --text-2xl: 20px;
+  --text-3xl: 22px;
+  --white: #fff;
+  --gray-1: #8c8c8c8c;
+  --gray-2: #666666;
+  --purple: #7150e6;
+}
+
+input::placeholder {
+  letter-spacing: 1px;
+}
+input:focus {
+  border: none;
+  outline: 1px solid var(--purple);
+}
+button {
+  transition: all 0.15s ease;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+/*.............Register............... */
+.authenticationTop__container {
+  height: 100vh;
+  width: 100vw;
+}
+.authenticationleftSide__container {
+  flex: 0.6;
+}
+.authenticationTop__container div:nth-child(1) img {
+  width: 100%;
+  height: 100%;
+}
+.register__container {
+  width: 500px;
+  justify-content: center;
+  margin: 0px auto;
+}
+.authenticationLogo__container {
+  justify-content: center;
+}
+.authenticationLogo__container div {
+  width: 330px;
+}
+
+.authenticationLogo__container img {
+  object-fit: contain;
+  width: 100%;
+  height: fit-content;
+}
+
+.authentication__header {
+  align-items: center;
+  gap: 20px;
+  padding: 20px 0px;
+  padding-top: 5px;
+}
+.authentication__header h4 {
+  font-size: var(--text-2xl);
+  font-weight: 600;
+}
+
+.goolge_loginButton_container {
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+.authentication__separator {
+  width: 60%;
+  gap: 10px;
+  padding-top: 5px;
+  align-items: center;
+}
+.authentication__separator span:first-child,
+.authentication__separator :last-child {
+  background-color: var(--gray-1);
+  height: 1px;
+  flex: 0.5;
+}
+
+.authentication__separator :nth-child(2) {
+  color: var(--gray-2);
+  font-size: 15px;
+}
+.authentication__lower {
+  padding-top: 5px;
+}
+.authentication__lower form {
+  gap: 10px;
+}
+.authenticationInput__container {
+  gap: 5px;
+}
+.authenticationInput__container input {
+  background-color: #f0edede8;
+  height: 40px;
+}
+.passwordInput {
+  position: relative;
+}
+.passwordInput > span {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: all 0.15s ease;
+}
+.passwordInput span:hover {
+  cursor: pointer;
+}
+.authenticationInput__header {
+  text-transform: capitalize;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  gap: 5px;
+  align-items: center;
+}
+.authenticationInput__header span {
+  color: red;
+  font-size: 16px;
+}
+
+.authentication__btn {
+  background-color: var(--purple);
+  border: none;
+  padding: 13px 15px;
+  border-radius: 5px;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 1px;
+  margin-top: 10px;
+}
+.authentication__btn:hover {
+  opacity: 0.96;
+}
+.authentication__btn:disabled {
+  cursor: not-allowed;
+}
+.authentication__footer {
+  justify-content: center;
+  gap: 10px;
+  font-size: 15px;
+}
+.authentication__footer p {
+  justify-content: center;
+  gap: 10px;
+}
+.authentication__footer p a {
+  font-weight: 400;
+}
+
+/* Small devices (small screens, landscape phones) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* Styles for small screens */
+}
+
+/* Medium devices (tablets) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* Styles for medium screens */
+}
+
+/* Large devices (desktops) */
+@media (max-width: 1199.98px) {
+  .authenticationleftSide__container {
+    display: none;
+  }
+  .register__container {
+    padding: 100px 20px;
+    justify-content: flex-start;
+  }
+}
+
+/* Extra large devices (large desktops) */
+@media (min-width: 1200px) {
+  /* Styles for extra-large screens */
+}
+
+/* others */
+.input__error section > section {
+  margin: 4px 0px;
+  align-items: center;
+  gap: 3px;
+  font-size: var(--text-small);
+  color: red;
+}
