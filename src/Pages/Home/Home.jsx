@@ -85,6 +85,16 @@ const Home = () => {
           func={brandOnOpen}
           className="bg-gradient-to-r to-[#cf57ff] from-[#642a22]"
         />
+        <Cad
+          title={"All Categories"}
+          route={"/categories"}
+          className="bg-gradient-to-r to-[#13294f] from-[#185c22]"
+        />
+        <Cad
+          title={"All Brands"}
+          route={"/brands"}
+          className="bg-gradient-to-r to-[#2b0421] from-[#642a22]"
+        />
       </div>
 
       <div className="my-5 py-2 flex flex-col gap-3 lg:flex-row">

@@ -60,9 +60,10 @@ const AddKitsModal = ({ isOpen, onOpenChange }) => {
       setKit("");
       setDescription("");
       setSelectedFile(null);
+      toast.success("Kit Added succesfully");
     } catch (error) {
       setIsLoading(false);
-      console.error(error);
+
       if (error.request.status === 500) {
         return;
       }

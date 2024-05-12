@@ -60,6 +60,7 @@ const AddFunctionalitiesModal = ({ isOpen, onOpenChange }) => {
       setFunctionality("");
       setDescription("");
       setSelectedFile(null);
+      toast.success("Functionality Added succesfully");
     } catch (error) {
       setIsLoading(false);
       console.error(error);

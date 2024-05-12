@@ -4,7 +4,8 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import LazyLoading from "./components/LazyLoading";
 import AddCourse from "./Pages/AddCourses/AddCourse";
 import Register from "./Pages/Register/Register";
-
+import AllBrands from "./Pages/AllBrands/AllBrands";
+import AllCategories from "./Pages/AllCategories/AllCategories";
 
 // Lazy load page components
 const Login = lazy(() => import("./Pages/Login/Login"));
@@ -26,6 +27,8 @@ function App() {
           <Route path="/tools/:id" element={<UpdateTool />} />
           <Route path="/addcourse" element={<AddCourse />} />
           <Route path="/course/:id" element={<UpdateCourse />} />
+          <Route path="/brands/" element={<AllBrands />} />
+          <Route path="/categories/" element={<AllCategories />} />
         </Routes>
       </Suspense>
     </>

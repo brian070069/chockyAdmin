@@ -60,7 +60,7 @@ const AddCategoryModal = ({ isOpen, onOpenChange }) => {
       setBrand("");
       setDescription("");
       setSelectedFile(null);
-      console.log(response.data);
+      toast.success("Brand Added succesfully");
     } catch (error) {
       setIsLoading(false);
       console.error(error);

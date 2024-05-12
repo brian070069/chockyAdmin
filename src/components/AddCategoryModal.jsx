@@ -60,6 +60,7 @@ const AddCategoryModal = ({ isOpen, onOpenChange }) => {
       setCategory("");
       setDescription("");
       setSelectedFile(null);
+      toast.success("Category Added succesfully");
     } catch (error) {
       setIsLoading(false);
       console.error(error);
